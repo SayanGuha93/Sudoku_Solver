@@ -1,0 +1,109 @@
+/* ========== GLOBAL RESET ========== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  body{
+    font-family:'Segoe UI',Tahoma,Arial,sans-serif;
+    background:#f8f9fa;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    min-height:100vh;
+    padding:1.5rem;
+  }
+  
+  /* ========== HEADER ========== */
+  .Header{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+  }
+  
+  #logo img{
+    width:48px;
+    height:48px;
+  }
+  
+  #name{
+    font-size:1.5rem;
+    font-weight:700;
+  }
+  
+  .Heading{
+    font-size:2rem;
+    font-weight:600;
+    margin-top:.5rem;
+  }
+  
+  /* ========== SUDOKU GRID ========== */
+  .sudoku_grid{
+    /* 9 × 9 CSS grid */
+    display:grid;
+    grid-template-columns:repeat(9,50px);
+    grid-template-rows:repeat(9,50px);
+  }
+  
+  /* Base cell styling */
+  .sudoku_grid > div{
+    width:50px;
+    height:50px;
+    border:1px solid #666;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.25rem;
+    font-weight:500;
+    user-select:none;
+  }
+  
+  /* Optional subtle alternating background for 3‑block groups */
+  .box1{background:#fff;}
+  .box2{background:#f0f2f5;}
+  .box3{background:#fff;}
+  
+  /* Thick borders around 3 × 3 sub‑grids */
+  .bl{border-left-width:3px!important;}
+  .bt{border-top-width:3px!important;}
+  .br{border-right-width:3px!important;}
+  .bb{border-bottom-width:3px!important;}
+  
+  /* ========== BUTTONS ========== */
+  .Buttons{
+    margin-top:1.25rem;
+    display:flex;
+    gap:.75rem;
+  }
+  
+  .Buttons button{
+    padding:10px 24px;
+    font-size:1rem;
+    font-weight:600;
+    border:0;
+    border-radius:6px;
+    background:#4f46e5;
+    color:#fff;
+    cursor:pointer;
+    transition:background .2s ease,transform .1s ease;
+  }
+  
+  .Buttons button:hover{background:#4338ca;}
+  .Buttons button:active{transform:translateY(1px);}
+  
+  /* ========== RESPONSIVE (phones) ========== */
+  @media(max-width:600px){
+    .sudoku_grid{
+      grid-template-columns:repeat(9,32px);
+      grid-template-rows:repeat(9,32px);
+    }
+    .sudoku_grid > div{
+      width:32px;
+      height:32px;
+      font-size:1rem;
+    }
+  }
+  
