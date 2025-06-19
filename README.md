@@ -1,6 +1,8 @@
 # Sudoku_Solver
 A Sudoku Solver project developed using Backtracking.
+
 For generating the Sudoku's initial grid and difficulity I used Heroku, it's completely free and reliable.
+
 https://sugoku.onrender.com/board?difficulty=easy returns a board with Easy difficulity
 Board - returns a puzzle board
 
